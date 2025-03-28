@@ -1,0 +1,74 @@
+@echo off
+
+:: Create project root directory
+mkdir embedded-biometric-approval-system
+cd embedded-biometric-approval-system
+
+:: Hardware Firmware Structure
+mkdir hardware\src hardware\include hardware\lib\fingerprint_library hardware\lib\encryption_module
+echo. > hardware\src\biometric_auth.cpp
+echo. > hardware\src\blockchain_interface.cpp
+echo. > hardware\src\secure_element.cpp
+echo. > hardware\src\usb_interface.cpp
+echo. > hardware\src\main.cpp
+echo. > hardware\include\biometric_auth.h
+echo. > hardware\include\blockchain_interface.h
+echo. > hardware\include\security_protocols.h
+echo. > hardware\platformio.ini
+
+:: Blockchain Infrastructure
+mkdir blockchain\contracts blockchain\migrations blockchain\test
+echo. > blockchain\contracts\AuthenticationRegistry.sol
+echo. > blockchain\contracts\TransactionApproval.sol
+echo. > blockchain\contracts\UserManagement.sol
+echo. > blockchain\test\authentication_test.js
+echo. > blockchain\test\transaction_approval_test.js
+echo. > blockchain\truffle-config.js
+
+:: Backend Management
+mkdir backend\src\controllers backend\src\services backend\src\models backend\src\utils backend\config
+echo. > backend\src\controllers\auth_controller.py
+echo. > backend\src\controllers\transaction_controller.py
+echo. > backend\src\services\blockchain_service.py
+echo. > backend\src\services\biometric_service.py
+echo. > backend\src\services\security_service.py
+echo. > backend\src\models\user_model.py
+echo. > backend\src\models\transaction_model.py
+echo. > backend\src\utils\encryption.py
+echo. > backend\src\utils\logging.py
+echo. > backend\config\database.py
+echo. > backend\config\blockchain_config.py
+echo. > backend\requirements.txt
+
+:: Frontend Interface
+mkdir frontend\src\components frontend\src\services frontend\src\utils
+echo. > frontend\src\components\AuthenticationFlow.js
+echo. > frontend\src\components\TransactionApproval.js
+echo. > frontend\src\services\api_service.js
+echo. > frontend\src\services\blockchain_service.js
+echo. > frontend\src\utils\security_helpers.js
+echo. > frontend\package.json
+
+:: Security Tooling
+mkdir security\cryptography security\audit
+echo. > security\cryptography\key_generation.py
+echo. > security\cryptography\secure_storage.py
+echo. > security\audit\log_analyzer.py
+
+:: Documentation
+mkdir docs
+echo. > docs\architecture.md
+echo. > docs\security_whitepaper.md
+echo. > docs\hardware_specification.md
+
+:: Utility Scripts
+mkdir scripts
+echo. > scripts\deploy_contracts.sh
+echo. > scripts\setup_environment.sh
+echo. > scripts\run_tests.sh
+
+:: Project Overview
+echo. > README.md
+
+echo Project structure created successfully!
+pause
